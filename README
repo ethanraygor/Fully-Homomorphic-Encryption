@@ -1,0 +1,13 @@
+Usage: 
+FHEv1 -k <key size> <KeyFileName>
+    <key size>: number of bits of P1, P2, and P3
+    <KeyFileName>: name of file that generated keys will be written to
+FHEv1 -e <m> <KeyFileName>
+    <m>: message to be encrypted
+    <KeyFileName>: name of file that keys will be read from
+FHEv1 -d <Cm> <KeyFileName>
+    <m>: message to be decrypted
+    <KeyFileName>: name of file that keys will be read from
+FHEv1 -b <m> <KeyFileName>
+    <m>: message to be encryptedand then decrypted
+    <KeyFileName>: name of file that keys will be read from
