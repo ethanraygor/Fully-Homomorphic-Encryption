@@ -114,12 +114,11 @@ public class FHEv1{
         P2 = BigInteger.probablePrime(keySize, r);
         Q = P1.multiply(new BigInteger("2"));
         Q = P1.add(new BigInteger("1"));
-        while(!Q.isProbablePrime(6)){
+        /*while(!Q.isProbablePrime(1)){
             P1 = BigInteger.probablePrime(keySize, r);
-            P2 = BigInteger.probablePrime(keySize, r);
             Q = P1.multiply(new BigInteger("2"));
             Q = P1.add(new BigInteger("1"));
-        }
+        }*/
         N = P1.multiply(P2);
         P3 = BigInteger.probablePrime(keySize, r);
         T = Q.multiply(P3);
