@@ -303,9 +303,9 @@ public class FHEv1{
 
         //parse args
         try{
-            if(args[1]=="-e"){
+            if(args[1].equals("-e")){
                 message1 = args[2];
-                if(args[3]=="-e"){
+                if(args[3].equals("-e")){
                     message2 = args[4];
                     keyFileName = args[5];
                 }else{
@@ -314,7 +314,7 @@ public class FHEv1{
                 }
             }else{
                 cMessage1 = args[1];
-                if(args[2]=="-e"){
+                if(args[2].equals("-e")){
                     message2 = args[3];
                     keyFileName = args[4];
                 }else{
@@ -379,9 +379,9 @@ public class FHEv1{
 
         //parse args
         try{
-            if(args[1]=="-e"){
+            if(args[1].equals("-e")){
                 message1 = args[2];
-                if(args[3]=="-e"){
+                if(args[3].equals("-e")){
                     message2 = args[4];
                     keyFileName = args[5];
                 }else{
@@ -390,7 +390,7 @@ public class FHEv1{
                 }
             }else{
                 cMessage1 = args[1];
-                if(args[2]=="-e"){
+                if(args[2].equals("-e")){
                     message2 = args[3];
                     keyFileName = args[4];
                 }else{
@@ -456,9 +456,9 @@ public class FHEv1{
 
         //parse args
         try{
-            if(args[1]=="-e"){
+            if(args[1].equals("-e")){
                 message1 = args[2];
-                if(args[3]=="-e"){
+                if(args[3].equals("-e")){
                     message2 = args[4];
                     keyFileName = args[5];
                 }else{
@@ -467,7 +467,7 @@ public class FHEv1{
                 }
             }else{
                 cMessage1 = args[1];
-                if(args[2]=="-e"){
+                if(args[2].equals("-e")){
                     message2 = args[3];
                     keyFileName = args[4];
                 }else{
