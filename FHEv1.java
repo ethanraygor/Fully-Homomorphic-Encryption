@@ -448,7 +448,9 @@ public class FHEv1{
         File file;
         Scanner reader;
         BigInteger g1;
+        int gi1;
         BigInteger g2;
+        int gi2;
         BigInteger T;
         BigInteger e1;
         BigInteger e2;
@@ -514,10 +516,12 @@ public class FHEv1{
         tmp = e1.subtract(e2);
         tmp = tmp.abs();
         g1 = g1.modPow(tmp, T);
-        if(g1.intValue()!=1){
+        gi1 = g1.intValue();
+        if(gi1!=1){
             return false;
         }
         g2 = g2.modPow(tmp, T);
+        gi2 = g2.intValue();
         if(g2.intValue()!=1){
             return false;
         }
