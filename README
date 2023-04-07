@@ -1,4 +1,22 @@
-Usage: 
+# Fully Homomorphic Encryption
+# Ethan Raygor
+# CS331
+# Spring 2023
+## Overview
+This project implements a fully homomorphic encryption algorithm (FHEv1) and 
+its variant (FHEv2).
+## Reflection
+Developing this project was fairly straight forward for me. I was able to 
+follow the assignment and lab handout and got most of it working. I couldn't 
+tell if my equality test was working correctly everytime even though I thought 
+I followed the instructions.
+## Compiling and Using
+### Compiling
+```
+$ javac FHEv1.java
+$ javac FHEv2.java
+```
+### Usage 
 FHEv1 -k <key size> <KeyFileName>
     <key size>: number of bits of P1, P2, and P3
     <KeyFileName>: name of file that generated keys will be written to
@@ -9,5 +27,59 @@ FHEv1 -d <Cm> <KeyFileName>
     <m>: message to be decrypted
     <KeyFileName>: name of file that keys will be read from
 FHEv1 -b <m> <KeyFileName>
+    <m>: message to be encrypted and then decrypted
+    <KeyFileName>: name of file that keys will be read from
+FHEv1 -a <-e <m1> | Cm1> <-e <m2> | Cm2> <KeyFileName>
+    <m1>: first message to be encrypted then added
+    <Cm1>: first cipher to be added
+    <m2>: second message to be encrypted then added
+    <Cm2>: second cipher to be added
+    <KeyFileName>: name of file that keys will be read from
+FHEv1 -m <-e <m1> | Cm1> <-e <m2> | Cm2> <KeyFileName>
+    <m1>: first message to be encrypted then multiplied
+    <Cm1>: first cipher to be multiplied
+    <m2>: second message to be encrypted then multiplied
+    <Cm2>: second cipher to be multiplied
+    <KeyFileName>: name of file that keys will be read from
+FHEv1 -t <-e <m1> | Cm1> <-e <m2> | Cm2> <KeyFileName>
+    <m1>: first message to be encrypted then tested for equality
+    <Cm1>: first cipher to be tested for equality
+    <m2>: second message to be encrypted then tested for equality
+    <Cm2>: second cipher to be tested for equality
+    <KeyFileName>: name of file that keys will be read from
+
+FHEv2 -k <key size> <w> <z> <KeyFileName>
+    <key size>: number of bits of P1
+    <w>: maximum bit size of all data in application
+    <z>: number of random bits to be left padded to the data
+    <KeyFileName>: name of file that generated keys will be written to
+FHEv2 -p <m> <KeyFileName>
+    <m>: message to have random padding applied to
+    <KeyFileName>: name of file that keys will be read from
+FHEv2 -e <m> <KeyFileName>
+    <m>: message to be encrypted
+    <KeyFileName>: name of file that keys will be read from
+FHEv2 -d <Cm > <KeyFileName>
+    <m>: message to be decrypted
+    <KeyFileName>: name of file that keys will be read from
+FHEv2 -b <m> <KeyFileName>
     <m>: message to be encryptedand then decrypted
     <KeyFileName>: name of file that keys will be read from
+FHEv2 -a <-e <m1> | Cm1> <-e <m2> | Cm2> <KeyFileName>
+    <m1>: first message to be encrypted then added
+    <Cm1>: first cipher to be added
+    <m2>: second message to be encrypted then added
+    <Cm2>: second cipher to be added
+    <KeyFileName>: name of file that keys will be read from
+FHEv2 -m <-e <m1> | Cm1 > <-e <m2> | Cm2 > <KeyFileName>
+    <m1>: first message to be encrypted then multiplied
+    <Cm1>: first cipher to be multiplied
+    <m2>: second message to be encrypted then multiplied
+    <Cm2>: second cipher to be multiplied
+    <KeyFileName>: name of file that keys will be read from
+
+## Sources
+https://docs.oracle.com/javase/7/docs/api/java/math/BigInteger.html
+https://www.w3schools.com/java/java_files_read.asp
+https://www.w3schools.com/java/java_files_create.asp
+https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html
